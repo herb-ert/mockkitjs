@@ -2,6 +2,15 @@ let seedValue = 1;
 let randomFn = mulberry32(seedValue);
 
 /**
+ * Sets the seed for deterministic randomness.
+ * @param {number} s - The seed value.
+ */
+export function seed(s) {
+  seedValue = s >>> 0; // force unsigned 32-bit int
+  randomFn = mulberry32(seedValue);
+}
+
+/**
  * Returns a random float between 0 (inclusive) and 1 (exclusive).
  * @returns {number} Pseudo-random float.
  */
