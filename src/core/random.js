@@ -6,7 +6,7 @@ let randomFn = mulberry32(seedValue);
  * @param {number} s - The seed value.
  */
 export function seed(s) {
-  seedValue = s >>> 0; // force unsigned 32-bit int
+  seedValue = s >>> 0;
   randomFn = mulberry32(seedValue);
 }
 
