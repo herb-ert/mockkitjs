@@ -140,3 +140,7 @@ dist
 
 # testing
 dev.js
+
+# publishing
+.npmrc.github
+.npmrc.npmjs
