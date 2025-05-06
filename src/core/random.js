@@ -1,3 +1,14 @@
+let seedValue = 1;
+let randomFn = mulberry32(seedValue);
+
+/**
+ * Returns a random float between 0 (inclusive) and 1 (exclusive).
+ * @returns {number} Pseudo-random float.
+ */
+export function rand() {
+  return randomFn();
+}
+
 /**
  * Mulberry32 PRNG - small, fast, deterministic
  * @param {number} a - Seed value.
